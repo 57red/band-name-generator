@@ -3,6 +3,8 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+app.use(express.static("public"));
+
 app.post("/submit", (req, res) => {
   const randomAdj = Math.floor(Math.random() * adj.length);
   const randomNoun = Math.floor(Math.random() * noun.length);
